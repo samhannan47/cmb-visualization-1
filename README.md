@@ -1,5 +1,8 @@
 # CMB Visualization Project
 
+![image](https://github.com/user-attachments/assets/b118908f-bc09-4428-b3fa-38085d7de0e2)
+
+
 This project focuses on analyzing and visualizing the Cosmic Microwave Background (CMB) data. The CMB is the faint radiation left over from the Big Bang, and it serves as a snapshot of the universe when it was only 380,000 years old. This project allows you to load, process, and visualize the CMB data using Python.
 
 ### Setup
