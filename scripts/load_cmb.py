@@ -15,23 +15,14 @@ def main():
 
             # Compute HEALPix nside
             num_pixels = len(data)
-            nside = 512  # Automatically determine nside
+            nside = 512
 
             print(f"Using nside = {nside}, HEALPix pixels = {num_pixels}")
 
-            # Remove dipole component before smoothing
-            print("Fitting and removing dipole component...")
-            monopole, dipole = hp.fit_dipole(data)  # Fit dipole
-
-            # Create dipole map manually
-            theta, phi = hp.pix2ang(nside, np.arange(num_pixels))
-            dipole_map = dipole[0] * np.cos(theta) + dipole[1] * np.sin(theta) * np.cos(phi) + dipole[2] * np.sin(theta) * np.sin(phi)
-            data_corrected = data - dipole_map  # Subtract dipole map from data
-
-            # Apply smoothing to the corrected data
+            # Apply smoothing to the data
             print("Smoothing the data...")
             start_time = time.time()
-            smoothed_data = hp.smoothing(data_corrected, fwhm=np.radians(0.05))  # Reduce smoothing
+            smoothed_data = hp.smoothing(data, fwhm=np.radians(.1))
             end_time = time.time()
             print(f"Data smoothed in {end_time - start_time:.2f} seconds.")
 
