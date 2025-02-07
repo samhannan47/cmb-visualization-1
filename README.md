@@ -10,14 +10,14 @@ Follow these steps to set up and run the project on your local machine:
    Clone this repository to your local machine:
 2. Create and Activate a Python Virtual Environment
    It's recommended to create a virtual environment to manage dependencies: `python3 -m venv cmb_env`
-   and `cmb_env\Scripts\activate`
+   and `source cmb_env/bin/activate`
 3. Install Required Dependencies
    Install the required Python libraries:
 4. Download the CMB Data
    Ensure you have the CMB data `COM_CMB_IQU-commander_4096_R4.00_full.fits` in the data/ directory. You can download it from Planck Legacy Archive, or you can use any other CMB dataset.
 
 5. Run the Script
-   Now, you're ready to run the Python script to load and visualize the CMB data: `python load_cmb.py`.
+   Now, you're ready to run the Python script to load and visualize the CMB data: `python scripts/load_cmb.py`.
    This will display the temperature map of the CMB, with warm and cool regions color-coded.
 
 ### What is CMB?
